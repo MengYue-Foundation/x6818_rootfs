@@ -1,4 +1,9 @@
 #libcurl
-export LD_LIBRARY_PATH=/home/curl/lib:$LD_LIBRARY_PATH:/home/zlib-1.2.3/
+export LD_LIBRARY_PATH=/home/curl/lib/
+
 #zlib
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/zlib-1.2.3/
+
+#libssl
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/openssl-0.9.8/
+
