@@ -1,0 +1,16 @@
+/dev/ttyUSB0
+115200
+hide-password
+noauth
+debug
+noipdefault
+local
+lock
+dump
+nodetach
+user "card"
+password "card"
+remotename cmnet
+ipparam cmnet
+usepeerdns
+connect '/usr/sbin/chat_pppd -s -v -f /etc/ppp/peers/gprs-chat'
