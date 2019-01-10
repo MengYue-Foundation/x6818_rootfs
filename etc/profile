@@ -7,3 +7,32 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/zlib-1.2.3/
 #libssl
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/openssl-0.9.8/
 
+#qt
+export QTDIR=/home/qt
+export PATH=$QTDIR:$PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$QTDIR/lib
+
+
+export LD_PRELOAD=/lib/preloadable_libiconv.so
+
+#此环境变量用来指示图片的处理库所在的路径
+export QT_QPA_PLATFORM_PLUGIN_PATH=/home/qt/plugins
+#此环境变量用来指示将来QT运行时操作的LCD显示屏的设备文件
+export QT_QPA_PLATFORM=linuxfb:tty=/dev/fb0
+#此环境变量用来指示QT运行时所需的字体库
+export QT_QPA_FONTDIR=$QTDIR/lib/fonts
+export set QT_QWS_FONTDIR=$QTDIR/lib/fonts/
+#此环境变量用来指示将来QT在和用户进行交互时对应的
+#触摸屏的设备文件,触摸屏的设备文件通过hexdump来测试
+export TSDEVICE=/dev/input/event1
+export QT_QPA_GENERIC_PLUGINS=evdevtouch:$TSDEVICE
+export QWS_MOUSE_PROTO=evdevtouch:$TSDEVICE
+#用来指示将来使用的LCD显示屏的设备文件
+export set QWS_DISPLAY=LinuxFb:/dev/fb0
+#用来指示LCD显示屏的分辨率
+export set QWS_SIZE=1024x600
+export set QWS_DISPLAY="LinuxFb:mmWidth300:mmHeight400:0"
+
+export TERM=vt100                             
+
+export TERMINFO=/usr/share/terminfo
